@@ -74,3 +74,25 @@ class csv
     static public function getRecords($filename)
 {
 
+    $file = fopen($filename, "r");
+
+    $fieldNames = array();
+    $first = true;
+    $records = array(); 
+
+    while (!feof($file)) {
+        $record = fgetcsv($file);
+
+        if ($first) {
+
+            $fieldNames = $record;
+            $first = false;
+
+        } else {
+
+            $records[] = array_combine($fieldNames, $record);
+
+        }
+
+    }
+    fclose($file);

@@ -90,11 +90,6 @@ class csv {
 }
 
 
-public function returnArray() {
-    $array = (array) $this;
-    return $array;
-}
-
 public function createProperty($name = 'first', $value = 'keith') {
         $this->{$name} = $value;
     }

@@ -78,7 +78,7 @@ class csv
 
     $fieldNames = array();
     $first = true;
-    $records = array(); 
+    $records = array();
 
     while (!feof($file)) {
         $record = fgetcsv($file);
@@ -92,7 +92,11 @@ class csv
 
             $records[] = array_combine($fieldNames, $record);
 
-        }
+            }
 
+        }
+        fclose($file);
+
+        return $records;
     }
-    fclose($file);
+}

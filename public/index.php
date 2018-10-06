@@ -89,9 +89,3 @@ class csv {
     }
 }
 
-
-public function createProperty($name = 'first', $value = 'keith') {
-        $this->{$name} = $value;
-    }
-}
-

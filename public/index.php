@@ -47,7 +47,7 @@ CSS;
         }
 
 
-        public static function generateRow(array $fields, $header = false){
+        public static function generateRows(array $fields, $header = false){
 
             echo "<tr>" . PHP_EOL;
 
